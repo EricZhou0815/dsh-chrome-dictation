@@ -1,0 +1,52 @@
+{
+  "name": "dsh-chrome-dictation",
+  "version": "1.0.0",
+  "description": "Dictate into the DeepSeek Harness message composer with Chrome's built-in speech recognition; no local model or dependency download.",
+  "type": "module",
+  "engines": {
+    "dsh": "^0.2.3-alpha.2"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "dictation",
+    "voice-input",
+    "speech-recognition",
+    "web-speech-api",
+    "chrome"
+  ],
+  "author": "Eric Zhou",
+  "license": "MIT",
+  "homepage": "https://github.com/EricZhou0815/dsh-chrome-dictation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricZhou0815/dsh-chrome-dictation.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

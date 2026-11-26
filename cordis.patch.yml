@@ -1,0 +1,7 @@
+# Adds the browser-native dictation microphone and retires the SenseVoice-based
+# microphone so the composer keeps a single dictation control.
+- insert:
+    - id: chrome-dictation
+      name: 'dsh-chrome-dictation'
+- id: ui-voice-input
+  disabled: true

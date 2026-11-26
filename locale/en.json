@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Chrome dictation",
+    "description": "Dictate into the DeepSeek Harness message composer with the speech recognition Chrome already ships, so dictation needs no local model and no dependency download. Click the microphone, speak, and click stop; the transcript is inserted at the caret in the unsent draft. The language dropdown beside the microphone offers 中文, English, 粤语, 繁體, 日本語 and 한국어; it starts from the DSH interface language and remembers the language you pick. Installing this bundle disables the shipped Voice input microphone, which transcribes locally with SenseVoice and downloads its runtime on first use, so the composer keeps one dictation control; removing this bundle restores it. Chrome sends the audio to its speech service, so recognition needs a network connection (and a proxy where that service is blocked outside Chrome's reach) and works only in Chrome or Edge on a secure page. Nothing is transcribed offline."
+  }
+}
