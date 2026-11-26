@@ -30,19 +30,32 @@ Where `raw.githubusercontent.com` is unreachable, use the jsDelivr mirror of the
 https://cdn.jsdelivr.net/gh/EricZhou0815/dsh-chrome-dictation@main/index.json
 ```
 
-**By package name.** Once published to npm, **Plugins → Add plugin** accepts
-`dsh-chrome-dictation`.
+**By package name.** The plugin is on npm: **Plugins → Add plugin** accepts
+`dsh-chrome-dictation` or `dsh-chrome-dictation@1.0.0`, and DSH installs it into the current
+profile.
 
 **From Git.** **Plugins → Add plugin** with a pinned commit:
 
 ```text
-git+https://github.com/EricZhou0815/dsh-chrome-dictation.git#<40-hex-commit>
+git+https://github.com/EricZhou0815/dsh-chrome-dictation.git#41ddf7ea0e7d138916a8ecdc5e848f6de5838cf6
 ```
+
+That is `main` at the time of writing; use the commit of the release you want.
 
 **From a local directory.** **Plugins → Add plugin** with the checkout path.
 
 Installing enables the bundle immediately. Reload the Web page once so the browser half
 loads.
+
+## Troubleshooting
+
+**`This package declares no bundle ... declares no dsh.bundle`.** The npm registry mirror
+configured on your machine resolved npm's `0.0.0-stage` placeholder instead of `1.0.0`; mirrors
+sync new releases late. The index above asks `registry.npmjs.org` first, so installing through
+Discover avoids the mirror, and the pinned Git spec avoids npm entirely.
+
+**`No matching version found ... dsh-chrome-dictation@1.0.0`.** Same cause: the mirror has not
+synced the release yet. Install through Discover, wait for the mirror, or use the Git spec.
 
 ## Use it
 
@@ -93,6 +106,7 @@ microphone back. No recorded audio is kept by either control.
 | `client.js` | browser half: microphone, language dropdown, Web Speech API |
 | `locale/*.json` | plugin-manager title and description |
 | `icon.svg` | plugin icon |
+| `index.json` | Discover index; regenerate it after publishing a new version |
 
 The browser half ships as plain JavaScript for the DSH client module loader; there is no
 build step. After editing `client.js`, reload the DSH Web page.
