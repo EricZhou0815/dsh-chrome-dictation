@@ -31,7 +31,7 @@ https://cdn.jsdelivr.net/gh/EricZhou0815/dsh-chrome-dictation@main/index.json
 ```
 
 **By package name.** The plugin is on npm: **Plugins → Add plugin** accepts
-`dsh-chrome-dictation` or `dsh-chrome-dictation@1.0.0`, and DSH installs it into the current
+`dsh-chrome-dictation` (add `@<version>` to pin one), and DSH installs it into the current
 profile.
 
 **From Git.** **Plugins → Add plugin** with a pinned commit:
