@@ -28,11 +28,9 @@
       "versions": [
         {
           "version": "1.0.0",
-          "publishTimestamp": 1795663109,
+          "publishTimestamp": 1795663820,
           "source": {
-            "type": "git",
-            "url": "https://github.com/EricZhou0815/dsh-chrome-dictation",
-            "commit": "19c693bd71ac05e95d96acb42e5f40f7ee12f385"
+            "type": "npm"
           },
           "engines": {
             "dsh": "^0.2.3-alpha.2"
