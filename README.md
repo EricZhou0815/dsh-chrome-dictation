@@ -24,6 +24,12 @@ plugins, open **Plugins → Discover → Add index source**, and add:
 https://raw.githubusercontent.com/EricZhou0815/dsh-chrome-dictation/main/index.json
 ```
 
+Where `raw.githubusercontent.com` is unreachable, use the jsDelivr mirror of the same file:
+
+```text
+https://cdn.jsdelivr.net/gh/EricZhou0815/dsh-chrome-dictation@main/index.json
+```
+
 **By package name.** Once published to npm, **Plugins → Add plugin** accepts
 `dsh-chrome-dictation`.
 
