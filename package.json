@@ -1,6 +1,6 @@
 {
   "name": "dsh-chrome-dictation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dictate into the DeepSeek Harness message composer with Chrome's built-in speech recognition; no local model or dependency download.",
   "type": "module",
   "engines": {
@@ -42,11 +42,15 @@
     "access": "public"
   },
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web",
       "immediately": true,
-      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
     }
   }
 }
