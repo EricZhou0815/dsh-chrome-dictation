@@ -1,6 +1,6 @@
 {
   "name": "dsh-chrome-dictation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dictate into the DeepSeek Harness message composer with Chrome's built-in speech recognition; no local model or dependency download.",
   "type": "module",
   "engines": {
