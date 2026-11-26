@@ -30,7 +30,8 @@
           "version": "1.0.0",
           "publishTimestamp": 1795663820,
           "source": {
-            "type": "npm"
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
           },
           "engines": {
             "dsh": "^0.2.3-alpha.2"
